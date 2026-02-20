@@ -11,6 +11,7 @@ import {
   FaTerminal,
   FaGithub,
   FaLinkedin,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import {
   SiWireshark,
@@ -20,6 +21,7 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import { ThemeToggle } from "./components/ThemeToggle";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -326,11 +328,12 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-(--text-muted) mb-6">
-                Sistema de sincronização de arquivos focado em segurança e
-                eficiência. Desenvolvido aplicando conceitos modernos de DevOps.
+                Plataforma colaborativa em tempo real para planejamento de
+                viagens. Conta com dashboards interativos de gastos, diário de
+                bordo com controle de privacidade e feed social da comunidade.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["DevOps", "Cloud", "Automation", "Python"].map((tag) => (
+                {["DevOps", "Cloud", "Automation"].map((tag) => (
                   <span
                     key={tag}
                     className="text-xs font-mono bg-(--bg-main) text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full border border-(--border-color)"
@@ -339,13 +342,13 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <a
-                href="https://sitewandersync.vercel.app/"
-                target="_blank"
-                className="inline-flex items-center gap-2 text-(--accent) hover:underline"
+              <Link
+                href="/wandersync"
+                className="inline-flex items-center gap-2 text-(--accent) hover:underline font-bold"
               >
-                Ver Projeto <FaGithub />
-              </a>
+                Ver Detalhes do Projeto{" "}
+                <FaExternalLinkAlt className="text-sm" />
+              </Link>
             </motion.div>
           </div>
         </div>
