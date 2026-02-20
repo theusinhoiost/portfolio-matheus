@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* LIGHT MODE */
+    --bg-main: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --accent: #0284c7;
+  }
+
+  .dark {
+    /* DARK MODE */
+    --bg-main: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: rgba(30, 41, 59, 0.4);
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --accent: #38bdf8;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Classes personalizadas limpas e prontas para o Tailwind v4 */
+
+  .card {
+    @apply bg-(--bg-card) p-6 rounded-lg border border-(--border-color) transition-all;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1;
+  }
+
+  .nav-blur {
+    @apply bg-(--bg-main)/80 backdrop-blur-md border-b border-(--border-color);
+  }
+
+  .section-bg {
+    @apply bg-(--bg-secondary)/50 py-20 px-6;
+  }
+
+  .badge-learning {
+    @apply absolute top-3 right-3 text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded font-bold transition-all;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 border border-emerald-500 text-emerald-500 hover:bg-emerald-500/10 rounded font-bold transition-all dark:text-emerald-400;
+  }
 }
