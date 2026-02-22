@@ -106,23 +106,16 @@ export default function Home() {
               Matheus Luiz Iost
             </h1>
 
-            <p className="text-lg text-slate-300 font-sans leading-relaxed">
-              Fullstack Developer focado em construir aplicações web escaláveis
-              com <span className="text-emerald-400">React / Next.js</span> no
-              frontend e <span className="text-emerald-400">NestJS</span> no
-              backend, criando APIs seguras com JWT, Postgres e ambientes
-              containerizados com Docker.
-            </p>
+<p className="text-lg text-slate-300 font-sans leading-relaxed">
+  Fullstack Developer com foco em <span className="text-emerald-400">React / Next.js</span> e{" "}
+  <span className="text-emerald-400">NestJS</span>. Construo APIs REST seguras (JWT),
+  integração com <span className="text-emerald-400">PostgreSQL</span> e deploy com{" "}
+  <span className="text-emerald-400">Docker</span>.
+</p>
 
-            <p className="text-sm text-slate-400 pt-2 font-sans">
-              Environment: <span className="text-emerald-400">Linux Mint</span>{" "}
-              • CLI-first • Docker workflow
-            </p>
-
-            <p className="text-sm text-slate-400 font-sans">
-              Interesses: DevOps (CI/CD, Kubernetes em aprendizado) • Security
-              (Wireshark, Nmap)
-            </p>
+<p className="text-sm text-slate-400 pt-2 font-sans">
+  Em aprendizado: CI/CD, Kubernetes • Interesse: Wireshark, Nmap
+</p>
 
             <motion.div
               initial={{ opacity: 0 }}
