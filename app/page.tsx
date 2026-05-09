@@ -318,14 +318,15 @@ export default function Home() {
                   WanderSync
                 </h3>
 
-                <span className="text-xs bg-cyan-100 text-cyan-800 px-2 py-1 rounded">
-                  Em Desenvolvimento
+                <span className="text-xs bg-zinc-100 text-zinc-800 px-2 py-1 rounded">
+                  Projeto Conceitual
                 </span>
               </div>
 
               <p className="text-(--text-muted) mb-6">
-                Plataforma colaborativa para planejamento de viagens com
-                autenticação JWT, dashboards interativos e backend em NestJS.
+                Projeto de planejamento de viagens desenvolvido para explorar
+                arquitetura full stack com Next.js, NestJS, autenticação JWT e
+                Docker.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
@@ -343,6 +344,54 @@ export default function Home() {
 
               <Link
                 href="/wandersync"
+                className="inline-flex items-center gap-2 text-(--accent) hover:underline font-bold"
+              >
+                Ver detalhes <FaExternalLinkAlt className="text-sm" />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="card card-hover hover:border-orange-500 group"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-2xl font-bold group-hover:text-orange-500">
+                  PetTracker
+                </h3>
+
+                <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">
+                  Projeto Principal
+                </span>
+              </div>
+
+              <p className="text-(--text-muted) mb-6">
+                Plataforma para gerenciamento de pets com autenticação segura,
+                controle de vacinas, registro de peso e dashboard de
+                acompanhamento. Desenvolvida com foco em arquitetura full stack
+                moderna.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {[
+                  "Next.js",
+                  "NestJS",
+                  "TypeScript",
+                  "Postgres",
+                  "JWT",
+                  "TypeORM",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-mono bg-(--bg-main) text-orange-500 px-3 py-1 rounded-full border border-(--border-color)"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <Link
+                href="/pettracker"
                 className="inline-flex items-center gap-2 text-(--accent) hover:underline font-bold"
               >
                 Ver detalhes <FaExternalLinkAlt className="text-sm" />
