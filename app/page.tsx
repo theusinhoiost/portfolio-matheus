@@ -260,7 +260,7 @@ export default function Home() {
 
         <div className="flex items-center gap-4 pt-2">
           <a
-            href="https://likedeliveryapp.netlify.app/"
+            href="https://likedeliveryapp.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm text-(--accent) hover:underline font-semibold"
