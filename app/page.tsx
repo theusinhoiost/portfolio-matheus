@@ -1,12 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BsEye } from "react-icons/bs";
 import { VscGear } from "react-icons/vsc";
 import {
   FaDocker,
   FaLinux,
-  FaShieldAlt,
   FaReact,
   FaTerminal,
   FaGithub,
@@ -14,10 +12,8 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import {
-  SiWireshark,
   SiNextdotjs,
   SiNestjs,
-  SiKubernetes,
   SiPostgresql,
   SiTailwindcss,
 } from "react-icons/si";
@@ -116,7 +112,7 @@ export default function Home() {
             </p>
 
             <p className="text-xs text-slate-400 pt-1 font-sans">
-              Em aprendizado: CI/CD, Kubernetes • Interesse: Wireshark, Nmap
+              Foco atual: Performance, Clean Architecture e Debug em produção • Inglês fluente
             </p>
 
             <motion.div
@@ -143,7 +139,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Skills */}
 {/* Skills */}
 <section id="skills" className="py-20 px-6 border-t border-(--border-color)/40">
   <div className="max-w-5xl mx-auto">
@@ -155,13 +150,13 @@ export default function Home() {
       Tech Radar
     </motion.h2>
 
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
       {/* 1. Development (Core) */}
       <div className="space-y-4">
         <div className="flex items-center gap-2 border-l-2 border-emerald-500 pl-3">
           <h3 className="text-lg font-bold">Development</h3>
         </div>
-        <p className="text-xs text-(--text-muted)">Construção de aplicações e APIs</p>
+        <p className="text-xs text-(--text-muted)">Stack principal em produção</p>
 
         <div className="grid grid-cols-2 gap-2.5">
           <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3">
@@ -178,7 +173,11 @@ export default function Home() {
           </div>
           <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3">
             <SiPostgresql className="text-2xl text-[#336791]" />
-            <span className="text-sm font-semibold">Postgres</span>
+            <span className="text-sm font-semibold">PostgreSQL</span>
+          </div>
+          <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3 col-span-2">
+            <SiTailwindcss className="text-2xl text-cyan-400" />
+            <span className="text-sm font-semibold">Tailwind + shadcn/ui</span>
           </div>
         </div>
       </div>
@@ -188,7 +187,7 @@ export default function Home() {
         <div className="flex items-center gap-2 border-l-2 border-purple-500 pl-3">
           <h3 className="text-lg font-bold">DevOps & Cloud</h3>
         </div>
-        <p className="text-xs text-(--text-muted)">Ambiente e deploy</p>
+        <p className="text-xs text-(--text-muted)">Deploy e ambiente</p>
 
         <div className="grid grid-cols-2 gap-2.5">
           <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3">
@@ -200,36 +199,10 @@ export default function Home() {
             <span className="text-sm font-semibold">Linux</span>
           </div>
           <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3 col-span-2">
-            <SiKubernetes className="text-2xl text-blue-500" />
+            <VscGear className="text-2xl text-slate-400" />
             <div className="flex flex-col">
-              <span className="text-sm font-semibold">Kubernetes</span>
-              <span className="text-[10px] text-purple-400">Estudando</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 3. Security & Networking (Diferencial) */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-2 border-l-2 border-red-500 pl-3">
-          <h3 className="text-lg font-bold">Security & Network</h3>
-        </div>
-        <p className="text-xs text-(--text-muted)">Fundamentos e análise</p>
-
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3">
-            <SiWireshark className="text-2xl text-blue-400" />
-            <span className="text-sm font-semibold">Wireshark</span>
-          </div>
-          <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3">
-            <BsEye className="text-2xl text-blue-600" />
-            <span className="text-sm font-semibold">Nmap</span>
-          </div>
-          <div className="p-3 rounded-lg border border-(--border-color) bg-(--bg-secondary)/20 flex items-center gap-3 col-span-2">
-            <FaShieldAlt className="text-2xl text-red-500" />
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold">App Security</span>
-              <span className="text-[10px] text-red-400">Práticas de SecDevOps</span>
+              <span className="text-sm font-semibold">CI/CD & Vercel</span>
+              <span className="text-[10px] text-(--text-muted)">Deploys em produção</span>
             </div>
           </div>
         </div>
@@ -239,7 +212,6 @@ export default function Home() {
 </section>
 
       {/* Projetos */}
-{/* Projetos */}
 <section id="projetos" className="py-20 px-6 border-t border-(--border-color)/40">
   <div className="max-w-5xl mx-auto">
     <h2 className="text-2xl font-bold text-center mb-12">
@@ -261,19 +233,19 @@ export default function Home() {
             </h3>
 
             <span className="text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded">
-              Startup em Dev
+              Em produção
             </span>
           </div>
 
           <p className="text-sm text-(--text-muted) mb-6 leading-relaxed">
-            Desenvolvimento completo de aplicação web escalável.
-            Arquitetura e implementação de APIs RESTful seguras com
-            autenticação robusta, integração eficiente front/back-end,
-            versionamento Git e padrões Clean Code.
+            Plataforma de delivery em produção. Implementei tracking de pedidos em tempo real
+            com polling e WebSocket, corrigi bug crítico de carrinho fantasma (orderId obsoleto)
+            que quebrava o checkout e falha de geolocalização na busca de restaurantes.
+            Reduzi 207 erros de lint/build para estabilizar deploys.
           </p>
 
           <div className="flex flex-wrap gap-1.5 mb-6">
-            {["React", "Next.js", "NestJS", "REST API", "Clean Code"].map(
+            {["React", "Next.js", "NestJS", "PostgreSQL", "WebSocket", "TypeScript"].map(
               (tag) => (
                 <span
                   key={tag}
@@ -286,7 +258,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Links do Projeto */}
         <div className="flex items-center gap-4 pt-2">
           <a
             href="https://likedeliveryapp.netlify.app/"
@@ -344,7 +315,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Links do Projeto */}
         <div className="flex items-center gap-4 pt-2">
           <a
             href="https://pet-tracker-web.vercel.app/"
@@ -356,7 +326,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/theusinhoiost/pet-tracker-web" // Cole aqui o link direto do repositório
+            href="https://github.com/theusinhoiost/pet-tracker-web"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm text-(--text-muted) hover:text-(--text-main) transition-colors font-medium"
