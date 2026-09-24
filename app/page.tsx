@@ -219,7 +219,7 @@ export default function Home() {
     </h2>
 
     <div className="grid md:grid-cols-2 gap-6">
-      {/* LikeDelivery */}
+      {/* Bearlivery */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -229,7 +229,7 @@ export default function Home() {
         <div>
           <div className="flex justify-between items-start mb-3">
             <h3 className="text-xl font-bold group-hover:text-emerald-400 transition-colors">
-              LikeDelivery
+              BearDelivery
             </h3>
 
             <span className="text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded">
@@ -260,7 +260,7 @@ export default function Home() {
 
         <div className="flex items-center gap-4 pt-2">
           <a
-            href="https://likedeliveryapp.vercel.app/"
+            href="https://beardelivery.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm text-(--accent) hover:underline font-semibold"
